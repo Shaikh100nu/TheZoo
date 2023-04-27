@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVC_crud_sonu_
+build_property.RootNamespace = MVC_crud_sonu_
+build_property.ProjectDir = E:\TheZoo\MVC(crud-sonu)\MVC(crud-sonu)\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\TheZoo\MVC(crud-sonu)\MVC(crud-sonu)
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Animal/AnimalForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFuaW1hbEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Animal/AnimalTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQW5pbWFsXEFuaW1hbFRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Generic/AddSaveForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJpY1xBZGRTYXZlRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Generic/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJpY1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Manager/Manager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxNYW5hZ2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/PartialView/HeaderNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbFZpZXdcSGVhZGVyTmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Users/LoginForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcTG9naW5Gb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/TheZoo/MVC(crud-sonu)/MVC(crud-sonu)/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bmw4squz1m

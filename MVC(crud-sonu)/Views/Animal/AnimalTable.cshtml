@@ -1,0 +1,129 @@
+﻿@{
+}
+<partial name="~/Views/PartialView/HeaderNavbar.cshtml" />
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody id="myBody">
+        @foreach (var item in ViewBag.AniamlList)
+        {
+            <tr>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Age</td>
+                <td>
+                    <a asp-action="AnimalForm" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Edit</a>
+                    <a asp-action="DeleteAnimal" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li id="PreviousButton" class="page-item"><a class="page-link">Previous</a></li>
+        <li page="1" onclick="handlePageination(1)" class="page-item"><a class="page-link">1</a></li>
+        <li page="2" onclick="handlePageination(2)" class="page-item"> <a class="page-link">2</a> </li>
+        <li page="3" onclick="handlePageination(3)" class="page-item"><a class="page-link">3</a></li>
+        <li id="NextButton" class="page-item"><a class="page-link">Next</a></li>
+    </ul>
+</nav>
+<p class="increasePage d-none">3</p>
+<p class="decreasePage d-none">1</p>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $(function () {
+
+                $("#PreviousButton").click(() => {
+                    let decreasePage = parseInt($('.decreasePage').html());
+                    let increasePage = parseInt($('.increasePage').html());
+              
+                        let _dTotal = decreasePage - 1;
+                        let _iTotal = increasePage - 1;
+
+                        $('.decreasePage').text(_dTotal);
+                        $('.increasePage').text(_iTotal);
+
+                        $(".pagination li").eq(-2).remove();
+                    $(".pagination li").eq(1).before(`<li page={${_dTotal}} onclick="handlePageination(${_dTotal})" class="page-item"> <a class="page-link">${_dTotal}</a></li>`);
+                    
+                    if (decreasePage > 1) {
+                        handlePrevious();
+                    }
+                });
+
+                $("#NextButton").click(() => {
+                    let increasePage = parseInt($('.increasePage').html());
+                    let total = increasePage + 1;
+                    $('.increasePage').text(total);
+                    $(".pagination li").eq(1).remove();
+                    $(".pagination li").eq(-1).before(`<li page={${total}} onclick="handlePageination(${total})" class="page-item"> <a class="page-link">${total}</a></li>`);
+                    let decreasePage = parseInt($(".pagination li a").eq(1).html());
+                    $(".decreasePage").text(decreasePage);
+                    if (decreasePage > 1) {
+                    handlePrevious();
+                    }
+                });
+
+                // At load this function will fire!
+                $(function () {
+                    handlePrevious();
+                });
+
+            });
+        });
+
+       function handlePrevious(){
+                  let decreasePage = parseInt($('.decreasePage').html());
+                    if (decreasePage === 1) {
+                    $(".pagination li:first-child").addClass('custom-disabled');
+                    }else{
+                    $(".pagination li:first-child").removeClass('custom-disabled');
+                    }
+       };
+
+        function handlePageination(pageNumber = 1) {
+            $.ajax({
+                url: "@Url.Action("GetAnimalTable")",
+                dataType: 'json',
+                data: {
+                    "pageNumber": pageNumber,
+                    "rowsOfPage": ""
+                },
+                cache: false,
+                success: function (response) {
+                    debugger
+                    console.log(response);
+
+                    $("#myBody").empty();
+                     
+                    for(var i = 0; i < response.length; i++)
+                    {
+                        var str = `<tr>
+                                        <td>${response[i].firstName}</td>
+                                        <td>${response[i].lastName}</td>
+                                        <td>${response[i].age}</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-primary" href="/Animal/AnimalForm?id=${response[i].id}">Edit</a>
+                                            <a class="btn btn-sm btn-danger" href="/Animal/DeleteAnimal?id=${response[i].id}">Delete</a>
+                                        </td>
+                                    </tr>`;
+
+                                    $("#myBody").append(str);
+                    }
+                },
+                error: function (xhr) {
+
+                }
+            })
+       };
+    </script>
+}
+
